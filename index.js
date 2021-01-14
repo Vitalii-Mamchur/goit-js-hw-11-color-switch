@@ -39,6 +39,7 @@ const colorСhanging = {
     clearInterval(this.intervalId);
     this.intervalId = null;
     this.changingActiv = false;
+    refs.startBtn.disabled = false;
   },
 };
 
