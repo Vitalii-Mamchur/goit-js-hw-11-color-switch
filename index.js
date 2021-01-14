@@ -23,7 +23,7 @@ const colorСhanging = {
     if (this.changingActiv) {
       return;
     }
-    
+
     this.changingActiv = true;
     this.intervalId = setInterval(() => {
       const randomIntegerFromInterval = (min, max) => {
@@ -32,9 +32,10 @@ const colorСhanging = {
       const bgColor = colors[randomIntegerFromInterval(this.min, this.max)];
       refs.body.style.background = bgColor;
     }, 1000);
+    refs.startBtn.disabled = true;
   },
 
-  stop() { 
+  stop() {
     clearInterval(this.intervalId);
     this.intervalId = null;
     this.changingActiv = false;
